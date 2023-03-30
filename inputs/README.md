@@ -1,4 +1,4 @@
-# Inputs
+# v0
 
-## Description
-The /inputs folder stores the parameters and any other files needed (data, referential) to run the files in the /models folder.
+Deposer ici deux fichiers FEC N et N-1. 
+Format: 000000000FEC20171231

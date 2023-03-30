@@ -1,137 +1,112 @@
 ![Naas.ai - Open Source Data Platform](assets/project_logo.png)
 
-# Naas Data Product Framework
-
-Naas is a low-code open source data platform that enables anyone working with data, including business analysts, scientists, and engineers, to easily create powerful data products combining automation, analytics, and AI from the comfort of their Jupyter notebooks. With its open source distribution model, Naas ensures visible source code and versioning, and allows you to create custom logic.
-
-The platform is structured around three low-code layers:
-
-- **Templates** enable users to create automated data jobs in minutes, and are the building blocks of data products.
-- **Drivers** act as connectors, allowing you to push and/or pull data from databases, APIs, and machine learning algorithms, and more.
-- **Features** transform Jupyter notebooks into a production-ready environment, with features such as scheduling, asset sharing, and notifications.
-
-You can try Naas for free using Naas Cloud, a stable environment that runs in your browser.
-
-## **How Does It Work?**
-
-This repository is a boilerplate for anyone who wishes to develop a data product using Naas. It is structured as follows:
-
-- The **`/assets`** folder stores any PNG, JPG, GIF, CSV, diagrams, or slides related to the documentation of the product.
-- The **`/inputs`** folder stores the parameters and any other files needed (data, referential) to run the files in the **`/models`** folder.
-    - **Referentials**: This subfolder should contain any reference data that is needed to run the models in the **`/models`** folder. This may include data dictionaries, lookup tables, or other types of reference data.
-    - **Mappings**: This subfolder should contain any mapping files that are needed to run the models in the **`/models`** folder. These may include files that define how data fields should be transformed or combined.
-    - **Rules**: This subfolder should contain any rule files that are needed to run the models in the **`/models`** folder. These may include files that define how data should be filtered, aggregated, or otherwise processed.
-- The **`/models`** folder stores any files that transform inputs into outputs (notebook, Python, SQL files). It should be organized with the following structure:
-    - The **Bronze** category should contain models that have been trained on a limited dataset and have achieved relatively low accuracy. These models may be useful for initial testing and prototyping, but may not be suitable for use in production environments.
-    - The **Silver** category should contain models that have been trained on a larger dataset and have achieved moderate accuracy. These models may be suitable for use in certain production environments, but may not be the most accurate option available.
-    - The **Gold** category should contain the most accurate models that have been trained on the largest and most diverse dataset available. These models are suitable for use in the most demanding production environments and are the top choice for mission-critical tasks.
-    - The **Insights** category should contain any additional information or analysis related to the models in the Bronze, Silver, and Gold categories. This may include performance metrics, error analysis, and other useful insights.
-    - The **`__pipeline__.ipynb`** file is a special file that specifies the order in which the models in the Bronze, Silver, and Gold categories should be trained and evaluated. This file is used to automate the model selection process, ensuring that the most accurate model is always used for a given task.
-    - The **`IMO_template.ipynb`**
-     file contains a collection of templates for data preprocessing, model training, and evaluation. These templates can be used as a starting point for creating new models, and can be customized as needed to suit the specific requirements of your project.
-- The **`/outputs`** folder stores all the files that would be exposed outside of the Naas server.
-- The **`/tests`** folder stores all tests to be performed before production.
-- The **`/utils`** folder stores all common functions used across files.
-- The **`requirements.txt`** file lists all the packages and dependencies.
-- The **`settings.ipynb`** file runs the product on a Naas server.
-- The **`update.ipynb`** file pulls this repository again.
-
-## What Are The Benefits?
-
-Some benefits of the Naas Data Product Framework are:
-
-- **Low-code approach**: The low-code nature of the Naas platform makes it easy for anyone, regardless of their technical background, to create powerful data products.
-- **Open source**: The open source distribution model of Naas ensures visible source code and versioning, and allows you to create custom logic.
-- **Jupyter integration**: Naas integrates seamlessly with Jupyter notebooks, allowing you to create data products from the comfort of your familiar environment.
-- **Versatility**: With its templates, drivers, and features, Naas is highly versatile and enables you to build almost anything.
-- **Cloud-based**: Naas Cloud, the stable environment provided by Naas, allows you to access the platform from anywhere with an internet connection.
-
-Overall, the Naas Data Product Framework is a powerful tool for anyone looking to create data products that combine automation, analytics, and AI.
-
-## Why a Data Product Development Framework Like Naas is Necessary?
-
-Just as web development frameworks like React.js help developers create web applications more efficiently by providing a set of standardized tools and components, data product development frameworks like Naas help data scientists and engineers create data products more efficiently by providing a set of standardized tools and components specifically designed for data processing, analytics, and AI.
-
-Some specific benefits of using a data product development framework like Naas include:
-
-- **Standardized structure**: A data product development framework provides a standardized structure for organizing and developing data products, which can make it easier to develop, maintain, and scale data products.
-- **Pre-built components**: A data product development framework includes a set of pre-built components, such as data connectors and data transformation tools, which can save time and effort compared to building these components from scratch.
-- **Integration with other tools**: A data product development framework typically integrates with other tools and technologies commonly used in the data world, such as Jupyter notebooks and machine learning libraries, which can make it easier to build and deploy data products.
-- **Collaboration and sharing**: A data product development framework can make it easier for multiple people to collaborate and share data products within an organization, as it provides a consistent framework for development and documentation.
-
-Overall, a data product development framework like Naas can provide a number of benefits to data scientists and engineers, including improved efficiency, integration with other tools, and the ability to collaborate and share data products within an organization.
-
-## How Data Products And Asociatedd Contracts Can Create More Trust From End-User?
-
-A data product framework can help with defining data contracts and creating trust with end users in several ways:
-
-- **Standardized structure**: A data product framework provides a standardized structure for organizing and developing data products, which can make it easier to define clear and consistent data contracts. For example, if a data product is built using a framework that specifies how input and output data should be structured and documented, it can be easier for end users to understand how the data product works and what they can expect from it.
-- **Transparency**: Many data product frameworks are open source, which means that the source code is visible and can be reviewed by anyone. This transparency can help build trust with end users, as they can see exactly how the data product works and how it processes their data.
-- **Auditability**: A data product framework can also provide tools and processes for auditing and reviewing data products, which can help ensure that they are reliable and accurate. This can be especially important for data products that are used in mission-critical applications, as end users need to be confident that the data products are reliable and trustworthy.
-
-Overall, a data product framework can help create trust with end users by providing a standardized and transparent structure for developing data products, and by providing tools and processes for auditing and reviewing the products to ensure their reliability.
-
-## **About This Repository**
-
-This Data Product Framework repository is a boilerplate to create powerful Data Products in your company. To get started:
-
-1. Create an organization on GitHub.
-2. Use this template to kickstart your Data Product.
-3. Start bringing value to your company.
-
-## **Built With**
-
-- Jupyter Notebooks
-- Naas
-
-## **Documentation**
-
-### **Prerequisites**
-
-- Create an account on naas.ai
-
-### **Installation**
-
-Follow the steps in the **`settings.ipynb`** notebook.
-
-## **Roadmap**
-
-- V0: Simple boilerplate with Naas pipeline feature
-- V1: Add Naas space feature to create powerful dashboard
-
-## **Support**
-
-If you have problems or questions, please open an issue and we will try to help you as soon as possible.
-
-## **Contributing**
-
-Contributions are welcome. If you have a suggestion that would make this better, please fork the repository and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star.
-
-To contribute:
-
-1. Create an account on naas.ai.
-2. Clone the repository on your machine.
-3. Create a feature branch.
-4. Commit your changes.
-5. Push to the branch.
-6. Open a pull request.
 
 
-## Product Owners
 
-* [Florent Ravenel](https://www.linkedin.com/in/florent-ravenel/) - florent@naas.ai
-* [Jeremy Ravenel](https://www.linkedin.com/in/ACoAAAJHE7sB5OxuKHuzguZ9L6lfDHqw--cdnJg/) - jeremy@naas.ai
-* [Maxime Jublou](https://www.linkedin.com/in/maximejublou/) - maxime@naas.ai
+# **FECthis - La solution pour exploiter la data de ta compta en seulement 5 min top chrono! 💰🇫🇷**
+
+[![Installation video guide](https://img.youtube.com/vi/UAhkbwXmjh4/maxresdefault.jpg)](https://www.youtube.com/watch?v=UAhkbwXmjh4)
+
+FECthis est un moteur de données (data engine, en anglais) créée par l'équipe de Naas et Alexandre Stevens qui permet d'exploiter facilement les données comptables de votre entreprise à partir du fichier d'écritures comptables fourni par votre expert-comptable préféré.
+
+Ce moteur de données est le fruit de la fusion de deux technologies puissantes, NAAS.AI et POWER BI, et il se compose de deux parties principales : 
+- un "backend" géré par naas.ai pour manipuler le fichier FEC
+- un "frontend" tableau de bord Power BI pour visualiser vos données financières.
+
+# **Installation**
+
+Avant d'utiliser FECthis, assurez-vous de suivre les étapes faciles ci-dessous :
+
+## **Prérequis**
+Système d'exploitation : Windows<br>
+Niveau : Facile<br>
+Durée d'installation : 5 minutes<br>
+Support d'installation : Guide vidéo et guide écrit<br>
 
 
-## Acknowledgments
+## **Étape 1 : Créer un compte gratuit Naas.ai**
 
-* [Awesome Notebooks](https://github.com/jupyter-naas/awesome-notebooks)
-* [Naas Drivers](https://github.com/jupyter-naas/drivers)
-* [Naas](https://github.com/jupyter-naas/naas)
-* [Naas Data Product](https://github.com/jupyter-naas/naas-data-product)
+https://www.naas.ai/free-forever
+
+## **Étape 2 : Clone ce dossier sur ton compte Naas.ai**
+
+https://www.naas.ai/free-forever
+
+## **Étape 3 : Lance le fichier settings.ipynb**
+
+1. Créer un dossier spécifique (exemple : "TEST_FECTHIS")
+2. Lancer le script /models/v0/script les deux fichiers FEC
+3. Ajouter éventuellement le logo de votre entreprise
+4. Lancer le script "models/v0/script.ipynb"
+5. Copier le dernier URL généré dans naas.ai pour le coller dans Power BI
+
+## **Étape 4 : Ouvrir le tableau de bord Power BI**
 
 
-## Legal
+1. Modifier les paramètres et coller l'URL copié précédemment
+2. Actualiser le tableau de bord
+3. Une popup apparaîtra pour l'authentification, sélectionner "Anonyme" et cliquer sur "Se connecter"
+4. Profitez de votre nouveau tableau de bord financier !
 
-This project is licensed under AGPL-3.0
+## **Étape 5 : Personaliser son moteur**
+
+Vous pouvez maintenant ajouter 2 fichiers FEC de votre entreprise pour 2 années conséquitives. 
+
+Vous pouvez aussi ajouter votre logo d'entreprise, il suffit de suivre les étapes suivantes :
+
+- Aller dans le dossier /assets et ajouter un fichier image du logo de votre entreprise.
+- Ouvrir le fichier /models/v0/script.ipynb et localiser la cellule de code contenant la variable LOGO.
+- Modifier la valeur de cette variable avec le nom de fichier et le chemin d'accès à votre fichier image logo. Par exemple, si vous avez ajouté un fichier appelé monlogo.png dans le dossier /assets, vous devriez modifier la variable comme suit : LOGO = "/assets/monlogo.png"
+
+
+# **Benefices**
+
+Avec FECthis, vous pouvez facilement :
+
+- Visualiser les données financières de votre entreprise avec un tableau de bord Power BI convivial.
+- Gagner du temps en évitant la saisie manuelle des données ou le besoin d'embaucher un comptable.
+- Suivre votre performance financière en temps réel et prendre de meilleures décisions financières pour votre entreprise.
+- Partager des informations et des rapports financiers avec votre équipe ou vos parties prenantes.
+
+# **Comment ça marche?**
+
+
+Naas.ai est un service cloud qui fournit une plateforme de gestion des données tout-en-un pour développer des solutions automatisée et facile à distribuer. Un Notebook est un document interactif qui permet aux utilisateurs de documenter, créer et d'exécuter du code, de visualiser des données, de créer des visualisations. Naas fournit une infrastructure pour exécuter ces Notebooks en production, de manière sécurisée et dans le cloud.
+
+Le Data Product Framework est une approche pour développer des produits de données qui impliquent plusieurs étapes telles que la collecte de données, le nettoyage, la transformation, la modélisation et l'analyse. Il est conçu pour aider les équipes à collaborer efficacement sur les projets de données, en leur fournissant un cadre de travail structuré.
+
+Le Data Product Framework est structuré, avec des dossiers organisés tels que /assets, /inputs, /models, /outputs, /tests et /utils.
+
+En utilisant Naas et le Data Product Framework, les équipes peuvent collaborer efficacement sur des projets de données, en travaillant sur des mêmes documents distribués dans le cloud. 
+Les fichiers et dossiers organisés permettent de gérer efficacement les données et les modèles, tandis que les outils tels que requirements.txt et settings.ipynb facilitent l'exécution et la mise à jour du produit.
+
+## Définitions
+
+- Le dossier **`/assets`**  stocke tout fichier PNG, JPG, GIF, CSV, diagrammes ou diapositives liés à la documentation du produit.
+- Le dossier **`/inputs`** stocke les paramètres et tous les autres fichiers nécessaires (données, référentiel) pour exécuter les fichiers du dossier /models.
+- Le dossier **`/models`** stocke tous les scripts qui transforment les entrées en sorties (notebook, fichiers Python, SQL). 
+    *La collection de modèles open source de Naas peuvent être utilisés comme point de départ pour créer de nouvelles customisations du produit*
+- Le dossier **`/outputs`** stocke tous les fichiers qui seraient exposés en dehors du serveur Naas.
+- Le dossier **`/outputs`**/tests stocke tous les tests à effectuer avant la production.
+- Le dossier **`/utils`** stocke toutes les fonctions communes utilisées dans les fichiers.
+- Le fichier **`requirements.txt`** répertorie tous les packages et dépendances.
+- Le fichier **`settings.ipynb`** exécute le produit sur un serveur Naas.
+- Le fichier **`update.ipynb`** extrait à nouveau ce référentiel.
+
+
+
+# **Combien ça coute?**
+
+
+
+# **Contactez-nous**
+
+Si vous souhaitez personnaliser le tableau de bord FECthis ou développer une solution similaire pour votre entreprise en utilisant d'autres sources de données, contactez-nous!
+
+Email: fecthis@naas.ai <br>
+ 
+
+
+# **Ressources**
+- Guide d'installation vidéo 
+- [Slides de présentation](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5144ca51-081)
