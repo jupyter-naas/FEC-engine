@@ -1,0 +1,12 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data
+.csv
+.xlsx
+
+# Models
+models/pipeline_executions
+
+# Outputs
+outputs
