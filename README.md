@@ -3,7 +3,7 @@
 
 
 
-# **FECthis - La solution pour exploiter la data de ta compta en seulement 5 min top chrono! 💰🇫🇷**
+# **FEC engine - La solution pour exploiter la data de ta compta en seulement 5 min top chrono! 💰🇫🇷**
 
 [![Installation video guide](https://img.youtube.com/vi/UAhkbwXmjh4/maxresdefault.jpg)](https://www.youtube.com/watch?v=UAhkbwXmjh4)
 
