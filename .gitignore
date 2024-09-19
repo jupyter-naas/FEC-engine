@@ -4,6 +4,7 @@
 # Data
 .csv
 .xlsx
+.logs
 
 # Models
 models/pipeline_executions
