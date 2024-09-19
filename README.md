@@ -3,67 +3,42 @@
 
 
 
-# **FEC engine - La solution pour exploiter la data de ta compta en seulement 5 min top chrono! 💰🇫🇷**
-
-[![Installation video guide](https://img.youtube.com/vi/UAhkbwXmjh4/maxresdefault.jpg)](https://www.youtube.com/watch?v=UAhkbwXmjh4)
-
-FECthis est un moteur de données (data engine, en anglais) créée par l'équipe de Naas et Alexandre Stevens qui permet d'exploiter facilement les données comptables de votre entreprise à partir du fichier d'écritures comptables fourni par votre expert-comptable préféré.
-
-Ce moteur de données est le fruit de la fusion de deux technologies puissantes, NAAS.AI et POWER BI, et il se compose de deux parties principales : 
-- un "backend" géré par naas.ai pour manipuler le fichier FEC
-- un "frontend" tableau de bord Power BI pour visualiser vos données financières.
+# **FEC engine - La solution pour exploiter la data de ta compta! 💰🇫🇷**
 
 # **Installation**
 
 Avant d'utiliser FECthis, assurez-vous de suivre les étapes faciles ci-dessous :
 
-## **Prérequis**
-Système d'exploitation : Windows<br>
-Niveau : Facile<br>
-Durée d'installation : 5 minutes<br>
-Support d'installation : Guide vidéo et guide écrit<br>
+## **Étape 1 : Créer un compte Naas.ai (Naas Lab uniquement disponible pour les comptes professionels)**
 
-
-## **Étape 1 : Créer un compte gratuit Naas.ai**
-
-https://www.naas.ai/free-forever
+https://www.naas.ai/
 
 ## **Étape 2 : Clone ce dossier sur ton compte Naas.ai**
 
-https://www.naas.ai/free-forever
+https://github.com/jupyter-naas/FEC-engine.git
 
-## **Étape 3 : Lance le fichier settings.ipynb**
+## **Étape 3 : Lance le fichier setup.ipynb**
 
-1. Créer un dossier spécifique (exemple : "TEST_FECTHIS")
-2. Lancer le script /models/v0/script les deux fichiers FEC
-3. Ajouter éventuellement le logo de votre entreprise
-4. Lancer le script "models/v0/script.ipynb"
-5. Copier le dernier URL généré dans naas.ai pour le coller dans Power BI
+L'exécution de ce fichier va permettre d'installer les librairies nécessaires au projet.
 
-## **Étape 4 : Ouvrir le tableau de bord Power BI**
+## **Étape 4 : Accède au Dashboard**
 
-
-1. Modifier les paramètres et coller l'URL copié précédemment
-2. Actualiser le tableau de bord
-3. Une popup apparaîtra pour l'authentification, sélectionner "Anonyme" et cliquer sur "Se connecter"
-4. Profitez de votre nouveau tableau de bord financier !
+1. Lancez le fichier run_dashboard.ipynb présent à la racine du projet
+2. Accèdez au dasboard via l'URL: https://app.naas.ai/user/{user_account}/proxy/8050/
 
 ## **Étape 5 : Personaliser son moteur**
 
-Vous pouvez maintenant ajouter 2 fichiers FEC de votre entreprise pour 2 années conséquitives. 
+Vous pouvez maintenant ajouter 2 fichiers FEC de votre entreprise pour 2 années conséquitives en cliquant sur la roue crantée en haut à droite.
 
-Vous pouvez aussi ajouter votre logo d'entreprise, il suffit de suivre les étapes suivantes :
-
-- Aller dans le dossier /assets et ajouter un fichier image du logo de votre entreprise.
-- Ouvrir le fichier /models/v0/script.ipynb et localiser la cellule de code contenant la variable LOGO.
-- Modifier la valeur de cette variable avec le nom de fichier et le chemin d'accès à votre fichier image logo. Par exemple, si vous avez ajouté un fichier appelé monlogo.png dans le dossier /assets, vous devriez modifier la variable comme suit : LOGO = "/assets/monlogo.png"
-
+1. Choisissez vos FECs sur votre PC
+2. Lorsque le format a bien été validé, vous pouvez cliquer sur "Executé le pipeline" pour mettre à jour les données.
+3. Une fois terminé, veuillez raffraichir votre page pour accéder aux nouvelles données.
 
 # **Benefices**
 
 Avec FECthis, vous pouvez facilement :
 
-- Visualiser les données financières de votre entreprise avec un tableau de bord Power BI convivial.
+- Visualiser les données financières de votre entreprise avec un tableau de bord Dashboard Ploty convivial et adaptable à tout support (PC et mobile).
 - Gagner du temps en évitant la saisie manuelle des données ou le besoin d'embaucher un comptable.
 - Suivre votre performance financière en temps réel et prendre de meilleures décisions financières pour votre entreprise.
 - Partager des informations et des rapports financiers avec votre équipe ou vos parties prenantes.
@@ -87,11 +62,10 @@ Les fichiers et dossiers organisés permettent de gérer efficacement les donné
 - Le dossier **`/models`** stocke tous les scripts qui transforment les entrées en sorties (notebook, fichiers Python, SQL). 
     *La collection de modèles open source de Naas peuvent être utilisés comme point de départ pour créer de nouvelles customisations du produit*
 - Le dossier **`/outputs`** stocke tous les fichiers qui seraient exposés en dehors du serveur Naas.
-- Le dossier **`/outputs`**/tests stocke tous les tests à effectuer avant la production.
+- Le dossier **`/tests`**/tests stocke tous les tests à effectuer avant la production.
 - Le dossier **`/utils`** stocke toutes les fonctions communes utilisées dans les fichiers.
 - Le fichier **`requirements.txt`** répertorie tous les packages et dépendances.
-- Le fichier **`settings.ipynb`** exécute le produit sur un serveur Naas.
-- Le fichier **`update.ipynb`** extrait à nouveau ce référentiel.
+- Le fichier **`setup.ipynb`** exécute le produit sur un serveur Naas.
 
 
 
